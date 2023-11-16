@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trabajo-grupal-programacion-y-estructuras-de-datos", "Trabajo-grupal-programacion-y-estructuras-de-datos.csproj", "{3F3EF39C-3A0A-4783-9516-0E6B54814CD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F3EF39C-3A0A-4783-9516-0E6B54814CD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F3EF39C-3A0A-4783-9516-0E6B54814CD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F3EF39C-3A0A-4783-9516-0E6B54814CD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F3EF39C-3A0A-4783-9516-0E6B54814CD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DC71E86-2188-477E-BA5C-70B9B8C1C7CF}
+	EndGlobalSection
+EndGlobal
