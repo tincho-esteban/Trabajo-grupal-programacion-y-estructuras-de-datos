@@ -70,7 +70,7 @@
             this.txtPassword.FocusedState.Parent = this.txtPassword;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(372, 219);
+            this.txtPassword.Location = new System.Drawing.Point(372, 215);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "";
@@ -84,9 +84,9 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(109, 141);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(257, 40);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(239, 40);
             this.guna2HtmlLabel1.TabIndex = 2;
-            this.guna2HtmlLabel1.Text = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Text = "guna2HtmlLabel";
             // 
             // btnIngresar
             // 
@@ -99,7 +99,7 @@
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.ShadowDecoration.Parent = this.btnIngresar;
             this.btnIngresar.Size = new System.Drawing.Size(180, 45);
-            this.btnIngresar.TabIndex = 3;
+            this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "guna2Button1";
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
