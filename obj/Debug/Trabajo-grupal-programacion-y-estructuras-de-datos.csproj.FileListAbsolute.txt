@@ -12,3 +12,16 @@ C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.inicio_sesion.resources
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Contenedor_Principal.resources
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Form1.resources
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\bin\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.exe.config
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\bin\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.exe
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\bin\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.pdb
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.csproj.AssemblyReference.cache
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Contenedor_Principal.resources
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Form1.resources
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.inicio_sesion.resources
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Properties.Resources.resources
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.csproj.GenerateResource.cache
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.csproj.CoreCompileInputs.cache
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.csproj.CopyComplete
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.exe
+C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.pdb

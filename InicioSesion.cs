@@ -40,6 +40,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             if (txtUsuario.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los campos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsuario.Focus();
             }
             else
             {
@@ -65,6 +66,31 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             }
             SR.Close();
             FS.Close();
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnIngresar.PerformClick();
+
+                e.Handled = true;
+            }
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnIngresar.PerformClick();
+
+                e.Handled = true;
+            }
         }
     }
 }
