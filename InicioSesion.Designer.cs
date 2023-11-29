@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(inicio_sesion));
             this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtUsuario.BorderRadius = 5;
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.DefaultText = "";
@@ -48,7 +52,7 @@
             this.txtUsuario.FocusedState.Parent = this.txtUsuario;
             this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsuario.HoverState.Parent = this.txtUsuario;
-            this.txtUsuario.Location = new System.Drawing.Point(368, 173);
+            this.txtUsuario.Location = new System.Drawing.Point(375, 233);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.PlaceholderText = "Usuario";
@@ -60,6 +64,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.BorderRadius = 5;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.DefaultText = "";
@@ -72,7 +77,7 @@
             this.txtPassword.FocusedState.Parent = this.txtPassword;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.HoverState.Parent = this.txtPassword;
-            this.txtPassword.Location = new System.Drawing.Point(368, 243);
+            this.txtPassword.Location = new System.Drawing.Point(375, 303);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderText = "Contraseña";
@@ -85,13 +90,14 @@
             // 
             // btnIngresar
             // 
+            this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIngresar.BorderRadius = 5;
             this.btnIngresar.CheckedState.Parent = this.btnIngresar;
             this.btnIngresar.CustomImages.Parent = this.btnIngresar;
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnIngresar.ForeColor = System.Drawing.Color.White;
             this.btnIngresar.HoverState.Parent = this.btnIngresar;
-            this.btnIngresar.Location = new System.Drawing.Point(393, 341);
+            this.btnIngresar.Location = new System.Drawing.Point(408, 376);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.ShadowDecoration.Parent = this.btnIngresar;
             this.btnIngresar.Size = new System.Drawing.Size(167, 41);
@@ -101,13 +107,27 @@
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(393, 112);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(451, 187);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(167, 40);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(82, 40);
             this.guna2HtmlLabel1.TabIndex = 3;
-            this.guna2HtmlLabel1.Text = "Login Form";
+            this.guna2HtmlLabel1.Text = "Login";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(432, 61);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(120, 120);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // inicio_sesion
             // 
@@ -115,12 +135,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "inicio_sesion";
             this.Text = "inicio_sesion";
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +154,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2Button btnIngresar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

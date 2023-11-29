@@ -36,5 +36,13 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             frmCont.Show();
             frmCont.Dock = DockStyle.Fill;
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
