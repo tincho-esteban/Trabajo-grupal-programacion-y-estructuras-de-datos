@@ -115,7 +115,7 @@
             this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
             this.guna2Button6.Size = new System.Drawing.Size(204, 54);
             this.guna2Button6.TabIndex = 7;
-            this.guna2Button6.Text = "Stock";
+            this.guna2Button6.Text = "Agregar";
             // 
             // guna2Button5
             // 
