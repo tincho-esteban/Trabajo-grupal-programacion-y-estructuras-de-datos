@@ -75,7 +75,7 @@
             this.txtPassword.Location = new System.Drawing.Point(368, 243);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
-            this.txtPassword.PlaceholderText = "Password";
+            this.txtPassword.PlaceholderText = "Contraseña";
             this.txtPassword.SelectedText = "";
             this.txtPassword.ShadowDecoration.Parent = this.txtPassword;
             this.txtPassword.Size = new System.Drawing.Size(235, 47);
@@ -103,7 +103,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(393, 98);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(393, 112);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(167, 40);
             this.guna2HtmlLabel1.TabIndex = 3;
