@@ -19,6 +19,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         }
 
         public inicio_sesion frmInicio = null;
+        public Contenedor_Principal frmCont = null;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -27,14 +28,24 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             frmInicio.Show();
             frmInicio.Dock = DockStyle.Fill;
         }
-
+        public string usuario;
         public void abrirFormulario()
         {
             frmInicio.Close();
-            Contenedor_Principal frmCont = new Contenedor_Principal();
+            frmCont = new Contenedor_Principal(this);
             frmCont.MdiParent = this;
             frmCont.Show();
             frmCont.Dock = DockStyle.Fill;
+            frmCont.Controls.Find("lblUsuario", true).FirstOrDefault().Text = usuario;
+        }
+
+        public void cerrarSesion()
+        {
+            frmCont.Close();
+            frmInicio = new inicio_sesion(this);
+            frmInicio.MdiParent = this;
+            frmInicio.Show();
+            frmInicio.Dock = DockStyle.Fill;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

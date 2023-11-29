@@ -51,6 +51,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 
                     if (txtUsuario.Text == datos[0] && txtPassword.Text == datos[1])
                     {
+                        frm1.usuario = datos[0];
                         frm1.abrirFormulario();
                         break;
                     }
