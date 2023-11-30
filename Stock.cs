@@ -17,8 +17,72 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         {
             InitializeComponent(); 
         }
+        private void Stock_Load(object sender, EventArgs e)
+        {
+            ListarProductos();
+        }
+        string botonAct = "agregar";
+        
 
+        void ListarProductos()
+        {
+            dgProductos.Rows.Clear();
+            FileStream FS = new FileStream("Productos.txt", FileMode.OpenOrCreate);
+            StreamReader SR = new StreamReader(FS);
+            string[] datos;
+            string linea = null;
+            while (!(SR.Peek() == -1))
+            {
+                linea = SR.ReadLine();
+                datos = linea.Split(';');
+                if (datos.Length == 0)
+                {
+                    break;
+                }
+                dgProductos.Rows.Add(datos);
+            }
+            SR.Close();
+            FS.Close();
+        }
         private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            botonAct = "agregar";
+            txtId.Visible = false;
+            txtProducto.Visible = true;
+            txtProducto.BringToFront();
+            txtPrecio.Visible = true;
+            txtPrecio.BringToFront();
+            txtUnidades.Visible = true;
+            txtUnidades.BringToFront();
+            lblAccion.Text = "Agregar";
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            botonAct = "editar";
+            txtId.Visible = true;
+            txtId.BringToFront();
+            txtProducto.Visible = true;
+            txtProducto.BringToFront();
+            txtPrecio.Visible = true;
+            txtPrecio.BringToFront();
+            txtUnidades.Visible = true;
+            txtUnidades.BringToFront();
+            lblAccion.Text = "Editar";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            botonAct = "eliminar";
+            txtId.Visible = true;
+            txtId.BringToFront();
+            txtProducto.Visible = false;
+            txtPrecio.Visible = false;
+            txtUnidades.Visible = false;
+            lblAccion.Text = "Eliminar";
+        }
+
+        private void agregar()
         {
             int precio = 0;
             string nombre = "";
@@ -76,33 +140,34 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             FSAux.Close();
 
             ListarProductos();
+        }
+
+        private void editar()
+        {
 
         }
 
-        void ListarProductos()
+        private void eliminar()
         {
-            dgProductos.Rows.Clear();
-            FileStream FS = new FileStream("Productos.txt", FileMode.OpenOrCreate);
-            StreamReader SR = new StreamReader(FS);
-            string[] datos;
-            string linea = null;
-            while (!(SR.Peek() == -1))
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (botonAct == "agregar")
             {
-                linea = SR.ReadLine();
-                datos = linea.Split(';');
-                if (datos.Length == 0)
-                {
-                    break;
-                }
-                dgProductos.Rows.Add(datos);
+                agregar();
             }
-            SR.Close();
-            FS.Close();
+            else if (botonAct == "editar")
+            {
+                editar();
+            }
+            else
+            {
+                eliminar();
+            }
         }
 
-        private void Stock_Load(object sender, EventArgs e)
-        {
-            ListarProductos();
-        }
+        
     }
 }
