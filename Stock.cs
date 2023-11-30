@@ -15,7 +15,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
     {
         public Stock()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
@@ -98,6 +98,11 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             }
             SR.Close();
             FS.Close();
+        }
+
+        private void Stock_Load(object sender, EventArgs e)
+        {
+            ListarProductos();
         }
     }
 }

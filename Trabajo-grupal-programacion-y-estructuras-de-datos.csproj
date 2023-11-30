@@ -63,11 +63,11 @@
     <Compile Include="Agregar.Designer.cs">
       <DependentUpon>Agregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarUsuarios.cs">
+    <Compile Include="ControlUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarUsuarios.Designer.cs">
-      <DependentUpon>AgregarUsuarios.cs</DependentUpon>
+    <Compile Include="ControlUsuarios.Designer.cs">
+      <DependentUpon>ControlUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="ContenedorPrincipal.cs">
       <SubType>Form</SubType>
@@ -86,12 +86,6 @@
     </Compile>
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarUsuarios.Designer.cs">
-      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,8 +115,8 @@
     <EmbeddedResource Include="Agregar.resx">
       <DependentUpon>Agregar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarUsuarios.resx">
-      <DependentUpon>AgregarUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="ControlUsuarios.resx">
+      <DependentUpon>ControlUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContenedorPrincipal.resx">
       <DependentUpon>ContenedorPrincipal.cs</DependentUpon>
@@ -132,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarUsuarios.resx">
-      <DependentUpon>ModificarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

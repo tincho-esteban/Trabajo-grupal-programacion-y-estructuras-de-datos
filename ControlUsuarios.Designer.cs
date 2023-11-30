@@ -1,6 +1,6 @@
 ﻿namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 {
-    partial class AgregarUsuarios
+    partial class ControlUsuarios
     {
         /// <summary>
         /// Required designer variable.

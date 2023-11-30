@@ -240,6 +240,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Stock";
             this.Text = "Stock";
+            this.Load += new System.EventHandler(this.Stock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
             this.ResumeLayout(false);
 

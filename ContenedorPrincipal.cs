@@ -29,7 +29,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         private Agregar frmA = null;
         private Stock frmS = null;
         private Ventas frmV = null;
-        private AgregarUsuarios frmAU = null;
+        private ControlUsuarios frmAU = null;
 
 
         private void btnReportes_Click(object sender, EventArgs e)
@@ -86,22 +86,9 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 
         private void btnControlUsuarios_Click(object sender, EventArgs e)
         {
-            if (btnControlUsuarios.Checked)
-            {
-                pnlUsuarios.Visible = true;
-                pnlUsuarios.BringToFront();
-            } else
-            {
-                pnlUsuarios.Visible = false;
-
-            }
-        }
-
-        private void btnAgregarUsuario_Click(object sender, EventArgs e)
-        {
             if (frmAU == null)
             {
-                frmAU = new AgregarUsuarios();
+                frmAU = new ControlUsuarios();
                 frmAU.TopLevel = false;
                 frmAU.Dock = DockStyle.Fill;
                 this.panelContenedor.Controls.Add(frmAU);

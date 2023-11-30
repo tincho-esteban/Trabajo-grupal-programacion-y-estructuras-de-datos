@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 {
-    public partial class AgregarUsuarios : Form
+    public partial class ControlUsuarios : Form
     {
-        public AgregarUsuarios()
+        public ControlUsuarios()
         {
             InitializeComponent();
         }
