@@ -32,3 +32,6 @@ C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Reportes.resources
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Stock.resources
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Ventas.resources
+C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\bin\Debug\img\ojoAbierto.png
+C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\bin\Debug\img\_66d1fd45-c736-4ee0-b52d-b6816ca5dd87-removebg-preview.png
+C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\bin\Debug\img\ojoCerrado.png

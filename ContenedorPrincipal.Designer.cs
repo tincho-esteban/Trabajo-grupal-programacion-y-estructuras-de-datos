@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Contenedor_Principal));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAgregarUsuario = new Guna.UI2.WinForms.Guna2Button();
             this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.btnVentas = new Guna.UI2.WinForms.Guna2Button();
             this.btnStock = new Guna.UI2.WinForms.Guna2Button();
@@ -38,18 +39,17 @@
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.imgUsuario = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAgregarUsuario = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.panelContenedor = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -64,22 +64,30 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 61);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(204, 500);
             this.guna2Panel1.TabIndex = 6;
+            // 
+            // btnAgregarUsuario
+            // 
+            this.btnAgregarUsuario.Animated = true;
+            this.btnAgregarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarUsuario.Location = new System.Drawing.Point(0, 216);
+            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
+            this.btnAgregarUsuario.Size = new System.Drawing.Size(204, 54);
+            this.btnAgregarUsuario.TabIndex = 11;
+            this.btnAgregarUsuario.Text = "Agregar Usuarios";
+            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.Animated = true;
-            this.btnCerrarSesion.CheckedState.Parent = this.btnCerrarSesion;
-            this.btnCerrarSesion.CustomImages.Parent = this.btnCerrarSesion;
             this.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.HoverState.Parent = this.btnCerrarSesion;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 446);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.ShadowDecoration.Parent = this.btnCerrarSesion;
             this.btnCerrarSesion.Size = new System.Drawing.Size(204, 54);
             this.btnCerrarSesion.TabIndex = 10;
             this.btnCerrarSesion.Text = "cerrar sesión";
@@ -88,15 +96,11 @@
             // btnVentas
             // 
             this.btnVentas.Animated = true;
-            this.btnVentas.CheckedState.Parent = this.btnVentas;
-            this.btnVentas.CustomImages.Parent = this.btnVentas;
             this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnVentas.ForeColor = System.Drawing.Color.White;
-            this.btnVentas.HoverState.Parent = this.btnVentas;
             this.btnVentas.Location = new System.Drawing.Point(0, 162);
             this.btnVentas.Name = "btnVentas";
-            this.btnVentas.ShadowDecoration.Parent = this.btnVentas;
             this.btnVentas.Size = new System.Drawing.Size(204, 54);
             this.btnVentas.TabIndex = 8;
             this.btnVentas.Text = "Ventas";
@@ -105,15 +109,11 @@
             // btnStock
             // 
             this.btnStock.Animated = true;
-            this.btnStock.CheckedState.Parent = this.btnStock;
-            this.btnStock.CustomImages.Parent = this.btnStock;
             this.btnStock.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStock.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.HoverState.Parent = this.btnStock;
             this.btnStock.Location = new System.Drawing.Point(0, 108);
             this.btnStock.Name = "btnStock";
-            this.btnStock.ShadowDecoration.Parent = this.btnStock;
             this.btnStock.Size = new System.Drawing.Size(204, 54);
             this.btnStock.TabIndex = 7;
             this.btnStock.Text = "Stock";
@@ -122,15 +122,11 @@
             // btnAgregar
             // 
             this.btnAgregar.Animated = true;
-            this.btnAgregar.CheckedState.Parent = this.btnAgregar;
-            this.btnAgregar.CustomImages.Parent = this.btnAgregar;
             this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.HoverState.Parent = this.btnAgregar;
             this.btnAgregar.Location = new System.Drawing.Point(0, 54);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.ShadowDecoration.Parent = this.btnAgregar;
             this.btnAgregar.Size = new System.Drawing.Size(204, 54);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
@@ -139,15 +135,11 @@
             // btnReportes
             // 
             this.btnReportes.Animated = true;
-            this.btnReportes.CheckedState.Parent = this.btnReportes;
-            this.btnReportes.CustomImages.Parent = this.btnReportes;
             this.btnReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReportes.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.HoverState.Parent = this.btnReportes;
             this.btnReportes.Location = new System.Drawing.Point(0, 0);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.ShadowDecoration.Parent = this.btnReportes;
             this.btnReportes.Size = new System.Drawing.Size(204, 54);
             this.btnReportes.TabIndex = 5;
             this.btnReportes.Text = "Reportes";
@@ -173,10 +165,10 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Image = global::Trabajo_grupal_programacion_y_estructuras_de_datos.Properties.Resources._66d1fd45_c736_4ee0_b52d_b6816ca5dd87_removebg_preview;
+            this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(12, 10);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(40, 40);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
@@ -187,7 +179,7 @@
             this.guna2CustomGradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderRadius = 10;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.imgUsuario);
             this.guna2CustomGradientPanel1.Controls.Add(this.lblUsuario);
             this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(101)))), ((int)(((byte)(187)))));
             this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.Transparent;
@@ -195,9 +187,36 @@
             this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(101)))), ((int)(((byte)(187)))));
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(804, 10);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(155, 40);
             this.guna2CustomGradientPanel1.TabIndex = 4;
+            // 
+            // imgUsuario
+            // 
+            this.imgUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.imgUsuario.ErrorImage = null;
+            this.imgUsuario.FillColor = System.Drawing.Color.Transparent;
+            this.imgUsuario.Image = ((System.Drawing.Image)(resources.GetObject("imgUsuario.Image")));
+            this.imgUsuario.ImageRotate = 0F;
+            this.imgUsuario.InitialImage = null;
+            this.imgUsuario.Location = new System.Drawing.Point(7, 5);
+            this.imgUsuario.Name = "imgUsuario";
+            this.imgUsuario.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgUsuario.Size = new System.Drawing.Size(30, 30);
+            this.imgUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgUsuario.TabIndex = 0;
+            this.imgUsuario.TabStop = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblUsuario.Location = new System.Drawing.Point(41, 11);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(50, 18);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2TextBox1
             // 
@@ -209,39 +228,19 @@
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox1.IconLeft")));
             this.guna2TextBox1.Location = new System.Drawing.Point(361, 10);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "buscar por id o nombre de producto";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Size = new System.Drawing.Size(294, 40);
             this.guna2TextBox1.TabIndex = 1;
             this.guna2TextBox1.TabStop = false;
-            // 
-            // btnAgregarUsuario
-            // 
-            this.btnAgregarUsuario.Animated = true;
-            this.btnAgregarUsuario.CheckedState.Parent = this.btnAgregarUsuario;
-            this.btnAgregarUsuario.CustomImages.Parent = this.btnAgregarUsuario;
-            this.btnAgregarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarUsuario.HoverState.Parent = this.btnAgregarUsuario;
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(0, 216);
-            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
-            this.btnAgregarUsuario.ShadowDecoration.Parent = this.btnAgregarUsuario;
-            this.btnAgregarUsuario.Size = new System.Drawing.Size(204, 54);
-            this.btnAgregarUsuario.TabIndex = 11;
-            this.btnAgregarUsuario.Text = "Agregar Usuarios";
-            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
             // 
             // guna2Separator1
             // 
@@ -265,37 +264,8 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(205, 61);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.ShadowDecoration.Parent = this.panelContenedor;
             this.panelContenedor.Size = new System.Drawing.Size(779, 500);
             this.panelContenedor.TabIndex = 10;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblUsuario.Location = new System.Drawing.Point(41, 11);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(108, 18);
-            this.lblUsuario.TabIndex = 0;
-            this.lblUsuario.Text = "guna2HtmlLabel1";
-            this.lblUsuario.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.ErrorImage = null;
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.InitialImage = null;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(7, 5);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // Contenedor_Principal
             // 
@@ -316,7 +286,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,6 +307,6 @@
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2Panel panelContenedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUsuario;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgUsuario;
     }
 }

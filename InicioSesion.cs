@@ -26,7 +26,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             if (File.Exists("Usuarios.txt")) {
                 FileStream FSAux = new FileStream("Usuarios.txt", FileMode.Create);
                 StreamWriter SW = new StreamWriter(FSAux);
-                SW.WriteLine("admin;admin;1");
+                SW.WriteLine("admin;admin;admin");
                 SW.Close();
                 FSAux.Close();
             }
@@ -91,6 +91,25 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
                 btnIngresar.PerformClick();
 
                 e.Handled = true;
+            }
+        }
+
+        bool click = false;
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+            if (click == false)
+            {
+                string img = Path.Combine(Application.StartupPath, "img/ojoAbierto.png");
+                imgContrasena.Image = Image.FromFile(img);
+                txtPassword.PasswordChar = '\0';
+                click = true;
+            }
+            else
+            {
+                string img = Path.Combine(Application.StartupPath, "img/ojoCerrado.png");
+                imgContrasena.Image = Image.FromFile(img);
+                txtPassword.PasswordChar = '*';
+                click = false;
             }
         }
     }
