@@ -20,6 +20,8 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 
         public inicio_sesion frmInicio = null;
         public Contenedor_Principal frmCont = null;
+        public string usuario;
+        public bool admin = false;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -28,7 +30,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             frmInicio.Show();
             frmInicio.Dock = DockStyle.Fill;
         }
-        public string usuario;
+        
         public void abrirFormulario()
         {
             frmInicio.Close();
@@ -37,6 +39,13 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             frmCont.Show();
             frmCont.Dock = DockStyle.Fill;
             frmCont.Controls.Find("lblUsuario", true).FirstOrDefault().Text = usuario;
+            if (admin)
+            {
+                frmCont.Controls.Find("btnControlUsuarios", true).FirstOrDefault().Visible = true;
+            } else
+            {
+                frmCont.Controls.Find("btnControlUsuarios", true).FirstOrDefault().Visible = false;
+            }
         }
 
         public void cerrarSesion()

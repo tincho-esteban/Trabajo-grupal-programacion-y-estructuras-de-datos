@@ -23,7 +23,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            if (File.Exists("Usuarios.txt")) {
+            if (!File.Exists("Usuarios.txt")) {
                 FileStream FSAux = new FileStream("Usuarios.txt", FileMode.Create);
                 StreamWriter SW = new StreamWriter(FSAux);
                 SW.WriteLine("admin;admin;admin");
@@ -35,12 +35,20 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             StreamReader SR = new StreamReader(FS);
             string linea = null;
             string[] datos;
+            bool existe = false;
 
 
             if (txtUsuario.Text == "" || txtPassword.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los campos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsuario.Focus();
+                if (txtUsuario.Text == "")
+                {
+                    txtUsuario.Focus();
+                }
+                else if (txtPassword.Text == "")
+                {
+                    txtPassword.Focus();
+                }
             }
             else
             {
@@ -52,12 +60,21 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
                     if (txtUsuario.Text == datos[0] && txtPassword.Text == datos[1])
                     {
                         frm1.usuario = datos[0];
+                        if (datos[2] == "admin")
+                        {
+                            frm1.admin = true;
+                        }
+                        else
+                        {
+                            frm1.admin = false;
+                        }
                         frm1.abrirFormulario();
+                        existe = true;
                         break;
                     }
-                    linea = SR.ReadLine();
                 }
-                if (linea == null)
+
+                if (existe == false)
                 {
                     MessageBox.Show("Usuario o contraseña incorrectos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPassword.Clear();
@@ -67,21 +84,6 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             }
             SR.Close();
             FS.Close();
-        }
-
-        private void txtPassword_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                btnIngresar.PerformClick();
-
-                e.Handled = true;
-            }
         }
 
         private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)

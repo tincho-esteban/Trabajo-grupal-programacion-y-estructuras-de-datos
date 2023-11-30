@@ -84,6 +84,19 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             frmV.Show();
         }
 
+        private void btnControlUsuarios_Click(object sender, EventArgs e)
+        {
+            if (btnControlUsuarios.Checked)
+            {
+                pnlUsuarios.Visible = true;
+                pnlUsuarios.BringToFront();
+            } else
+            {
+                pnlUsuarios.Visible = false;
+
+            }
+        }
+
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
             if (frmAU == null)
@@ -101,5 +114,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         {
             frm1.cerrarSesion();
         }
+
+        
     }
 }

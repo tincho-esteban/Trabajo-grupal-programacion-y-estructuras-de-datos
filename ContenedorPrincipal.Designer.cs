@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Contenedor_Principal));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAgregarUsuario = new Guna.UI2.WinForms.Guna2Button();
+            this.pnlUsuarios = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregarUsuarios = new Guna.UI2.WinForms.Guna2Button();
+            this.btnControlUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.btnVentas = new Guna.UI2.WinForms.Guna2Button();
             this.btnStock = new Guna.UI2.WinForms.Guna2Button();
@@ -46,6 +49,7 @@
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.panelContenedor = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
+            this.pnlUsuarios.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -55,7 +59,8 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.guna2Panel1.Controls.Add(this.btnAgregarUsuario);
+            this.guna2Panel1.Controls.Add(this.pnlUsuarios);
+            this.guna2Panel1.Controls.Add(this.btnControlUsuarios);
             this.guna2Panel1.Controls.Add(this.btnCerrarSesion);
             this.guna2Panel1.Controls.Add(this.btnVentas);
             this.guna2Panel1.Controls.Add(this.btnStock);
@@ -67,18 +72,56 @@
             this.guna2Panel1.Size = new System.Drawing.Size(204, 500);
             this.guna2Panel1.TabIndex = 6;
             // 
-            // btnAgregarUsuario
+            // pnlUsuarios
             // 
-            this.btnAgregarUsuario.Animated = true;
-            this.btnAgregarUsuario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAgregarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAgregarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarUsuario.Location = new System.Drawing.Point(0, 216);
-            this.btnAgregarUsuario.Name = "btnAgregarUsuario";
-            this.btnAgregarUsuario.Size = new System.Drawing.Size(204, 54);
-            this.btnAgregarUsuario.TabIndex = 11;
-            this.btnAgregarUsuario.Text = "Agregar Usuarios";
-            this.btnAgregarUsuario.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
+            this.pnlUsuarios.Controls.Add(this.guna2Button2);
+            this.pnlUsuarios.Controls.Add(this.btnAgregarUsuarios);
+            this.pnlUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlUsuarios.Location = new System.Drawing.Point(0, 270);
+            this.pnlUsuarios.Name = "pnlUsuarios";
+            this.pnlUsuarios.Size = new System.Drawing.Size(204, 108);
+            this.pnlUsuarios.TabIndex = 12;
+            this.pnlUsuarios.Visible = false;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(0, 54);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(204, 54);
+            this.guna2Button2.TabIndex = 13;
+            this.guna2Button2.Text = "Modoficar/Eliminar Usuarios";
+            // 
+            // btnAgregarUsuarios
+            // 
+            this.btnAgregarUsuarios.Animated = true;
+            this.btnAgregarUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarUsuarios.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregarUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.btnAgregarUsuarios.Name = "btnAgregarUsuarios";
+            this.btnAgregarUsuarios.Size = new System.Drawing.Size(204, 54);
+            this.btnAgregarUsuarios.TabIndex = 12;
+            this.btnAgregarUsuarios.Text = "Agregar Usuarios";
+            this.btnAgregarUsuarios.Click += new System.EventHandler(this.btnAgregarUsuario_Click);
+            // 
+            // btnControlUsuarios
+            // 
+            this.btnControlUsuarios.Animated = true;
+            this.btnControlUsuarios.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.ToogleButton;
+            this.btnControlUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnControlUsuarios.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnControlUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnControlUsuarios.Location = new System.Drawing.Point(0, 216);
+            this.btnControlUsuarios.Name = "btnControlUsuarios";
+            this.btnControlUsuarios.Size = new System.Drawing.Size(204, 54);
+            this.btnControlUsuarios.TabIndex = 11;
+            this.btnControlUsuarios.Text = "Control Usuarios";
+            this.btnControlUsuarios.Visible = false;
+            this.btnControlUsuarios.Click += new System.EventHandler(this.btnControlUsuarios_Click);
             // 
             // btnCerrarSesion
             // 
@@ -282,6 +325,7 @@
             this.Text = "Contenedor_Principal";
             this.Load += new System.EventHandler(this.Contenedor_Principal_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.pnlUsuarios.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
@@ -302,11 +346,14 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2Button btnAgregarUsuario;
+        private Guna.UI2.WinForms.Guna2Button btnControlUsuarios;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2VSeparator guna2VSeparator1;
         private Guna.UI2.WinForms.Guna2Panel panelContenedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUsuario;
         private Guna.UI2.WinForms.Guna2CirclePictureBox imgUsuario;
+        private Guna.UI2.WinForms.Guna2Panel pnlUsuarios;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button btnAgregarUsuarios;
     }
 }

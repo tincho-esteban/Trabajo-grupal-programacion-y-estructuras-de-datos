@@ -32,9 +32,9 @@
             this.txtContrasena = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRepetirContrasena = new Guna.UI2.WinForms.Guna2TextBox();
             this.imgContrasena = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.chbAdmin = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnIngresar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAgregar = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgContrasena)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             this.txtUsuario.SelectedText = "";
             this.txtUsuario.Size = new System.Drawing.Size(235, 47);
             this.txtUsuario.TabIndex = 4;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContrasena
             // 
@@ -76,11 +77,12 @@
             this.txtContrasena.Location = new System.Drawing.Point(272, 155);
             this.txtContrasena.Margin = new System.Windows.Forms.Padding(5);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '\0';
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.PlaceholderText = "Contraseña";
             this.txtContrasena.SelectedText = "";
             this.txtContrasena.Size = new System.Drawing.Size(235, 47);
             this.txtContrasena.TabIndex = 5;
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtRepetirContrasena
             // 
@@ -98,11 +100,12 @@
             this.txtRepetirContrasena.Location = new System.Drawing.Point(272, 212);
             this.txtRepetirContrasena.Margin = new System.Windows.Forms.Padding(5);
             this.txtRepetirContrasena.Name = "txtRepetirContrasena";
-            this.txtRepetirContrasena.PasswordChar = '\0';
+            this.txtRepetirContrasena.PasswordChar = '*';
             this.txtRepetirContrasena.PlaceholderText = "Repetir contraseña";
             this.txtRepetirContrasena.SelectedText = "";
             this.txtRepetirContrasena.Size = new System.Drawing.Size(235, 47);
             this.txtRepetirContrasena.TabIndex = 6;
+            this.txtRepetirContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // imgContrasena
             // 
@@ -120,21 +123,21 @@
             this.imgContrasena.UseTransparentBackground = true;
             this.imgContrasena.Click += new System.EventHandler(this.imgContrasena_Click);
             // 
-            // guna2CustomCheckBox1
+            // chbAdmin
             // 
-            this.guna2CustomCheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(335, 273);
-            this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.Size = new System.Drawing.Size(20, 20);
-            this.guna2CustomCheckBox1.TabIndex = 8;
-            this.guna2CustomCheckBox1.Text = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CustomCheckBox1.UncheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbAdmin.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbAdmin.CheckedState.BorderRadius = 2;
+            this.chbAdmin.CheckedState.BorderThickness = 0;
+            this.chbAdmin.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.chbAdmin.Location = new System.Drawing.Point(335, 273);
+            this.chbAdmin.Name = "chbAdmin";
+            this.chbAdmin.Size = new System.Drawing.Size(20, 20);
+            this.chbAdmin.TabIndex = 8;
+            this.chbAdmin.Text = "guna2CustomCheckBox1";
+            this.chbAdmin.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.chbAdmin.UncheckedState.BorderRadius = 2;
+            this.chbAdmin.UncheckedState.BorderThickness = 0;
+            this.chbAdmin.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
             // guna2HtmlLabel1
             // 
@@ -145,27 +148,27 @@
             this.guna2HtmlLabel1.TabIndex = 9;
             this.guna2HtmlLabel1.Text = "permisos de admin";
             // 
-            // btnIngresar
+            // btnAgregar
             // 
-            this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnIngresar.BorderRadius = 5;
-            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnIngresar.ForeColor = System.Drawing.Color.White;
-            this.btnIngresar.Location = new System.Drawing.Point(306, 310);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(167, 41);
-            this.btnIngresar.TabIndex = 10;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnAgregar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregar.BorderRadius = 5;
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(306, 310);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(167, 41);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // AgregarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 500);
-            this.Controls.Add(this.btnIngresar);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.guna2CustomCheckBox1);
+            this.Controls.Add(this.chbAdmin);
             this.Controls.Add(this.imgContrasena);
             this.Controls.Add(this.txtRepetirContrasena);
             this.Controls.Add(this.txtContrasena);
@@ -184,8 +187,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtContrasena;
         private Guna.UI2.WinForms.Guna2TextBox txtRepetirContrasena;
         private Guna.UI2.WinForms.Guna2PictureBox imgContrasena;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox1;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox chbAdmin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button btnIngresar;
+        private Guna.UI2.WinForms.Guna2Button btnAgregar;
     }
 }
