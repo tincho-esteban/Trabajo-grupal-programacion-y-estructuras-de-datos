@@ -162,7 +162,12 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             linea2 = id + ";" + nombre + ";" + costo + ";" + precio + ";" + unidades;
             FileStream FSAux = new FileStream("Productos.txt", FileMode.Append);
             StreamWriter SW = new StreamWriter(FSAux);
+            FileStream FS2 = new FileStream("ProductosVendidos.txt", FileMode.Append);
+            StreamWriter SW2 = new StreamWriter(FS2);
             SW.WriteLine(linea2);
+            SW2.WriteLine(nombre + ";0;0");
+            SW2.Close();
+            FS2.Close();
             SW.Close();
             FSAux.Close();
 

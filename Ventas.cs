@@ -5,9 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Guna.UI2.Native.WinApi;
 
 namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 {
@@ -324,18 +326,60 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         private void btnVender_Click(object sender, EventArgs e)
         {
             //venta
-            FileStream FS = new FileStream("ProductosVendidos.txt", FileMode.Append);
-            FileStream FSV = new FileStream("Ventas.txt", FileMode.Append);
-            StreamWriter SW = new StreamWriter(FS);
-            StreamWriter SWV = new StreamWriter(FSV);
-            for (int i = 0; i < dgCarrito.Rows.Count; i++)
-            {
-                SW.WriteLine(dgCarrito.Rows[i].Cells[0].Value + ";" + dgCarrito.Rows[i].Cells[1].Value + ";" + dgCarrito.Rows[i].Cells[2].Value + ";" + dgCarrito.Rows[i].Cells[3].Value + ";" + dgCarrito.Rows[i].Cells[4].Value);
-            }
-            SWV.WriteLine(txtPrecioTotal.Text);
+            FileStream FS = new FileStream("ProductosVendidos.txt", FileMode.OpenOrCreate);
+            StreamReader SR = new StreamReader(FS);
+            FileStream FSAUX = new FileStream("ProductosVendidosAux.txt", FileMode.OpenOrCreate);
+            StreamWriter SW = new StreamWriter(FSAUX);
 
-            SW.Close();
+            bool existe = false;
+            string linea = null;
+            string[] datos;
+            while (!(SR.Peek() == -1))
+            {
+                linea = SR.ReadLine();
+                datos = linea.Split(';');
+                if (datos.Length == 0)
+                {
+                    break;
+                }
+                for (int i = 0; i < dgCarrito.Rows.Count; i++)
+                {
+                    if (datos[0] == dgCarrito.Rows[i].Cells[1].Value.ToString())
+                    {
+                        int cantidad = int.Parse(datos[1]) + Convert.ToInt32(dgCarrito.Rows[i].Cells[2].Value);
+                        int total = int.Parse(datos[2]) + Convert.ToInt32(dgCarrito.Rows[i].Cells[4].Value);
+                        SW.WriteLine(dgCarrito.Rows[i].Cells[1].Value + ";" + cantidad + ";" + total);
+                        existe = true;
+                        break;
+                    }
+                }
+                if (!existe)
+                {
+                    SW.WriteLine(linea);
+                }
+                existe = false;
+            }
+
+
+            
+            SR.Close();
             FS.Close();
+
+            
+            SW.Close();
+            FSAUX.Close();
+
+
+            File.Delete("ProductosVendidos.txt");
+            File.Move("ProductosVendidosAux.txt", "ProductosVendidos.txt");
+
+
+            FileStream FSV = new FileStream("Ventas.txt", FileMode.Append);
+            StreamWriter SWV = new StreamWriter(FSV);
+            DateTime dateTime = DateTime.Now;
+            string linea2 = dateTime.ToString() + ";" + txtPrecioTotal.Text;
+            SWV.WriteLine(linea2);
+
             SWV.Close();
             FSV.Close();
 

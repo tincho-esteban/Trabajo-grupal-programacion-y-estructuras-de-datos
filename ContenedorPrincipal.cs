@@ -38,6 +38,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         {
             frmR.BringToFront();
             frmR.Show();
+            frmR.actualizar();
         }
 
         private void btnStock_Click(object sender, EventArgs e)

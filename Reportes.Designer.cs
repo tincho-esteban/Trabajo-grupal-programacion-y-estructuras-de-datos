@@ -102,7 +102,7 @@
             this.guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.crtVentas = new Guna.Charts.WinForms.GunaChart();
             this.guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.gunaChart3 = new Guna.Charts.WinForms.GunaChart();
+            this.crtGastos = new Guna.Charts.WinForms.GunaChart();
             this.guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblUltVenta = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -110,7 +110,7 @@
             this.lblVentaProm = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ShadowPanel9 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.gunaChart4 = new Guna.Charts.WinForms.GunaChart();
+            this.crtUltimasVentas = new Guna.Charts.WinForms.GunaChart();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel4.SuspendLayout();
             this.guna2ShadowPanel5.SuspendLayout();
@@ -174,9 +174,9 @@
             // 
             chartFont1.FontName = "Arial";
             this.crtGanancias.Legend.LabelFont = chartFont1;
-            this.crtGanancias.Location = new System.Drawing.Point(20, 21);
+            this.crtGanancias.Location = new System.Drawing.Point(13, 13);
             this.crtGanancias.Name = "crtGanancias";
-            this.crtGanancias.Size = new System.Drawing.Size(211, 121);
+            this.crtGanancias.Size = new System.Drawing.Size(226, 146);
             this.crtGanancias.TabIndex = 0;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -291,9 +291,9 @@
             // 
             chartFont9.FontName = "Arial";
             this.crtVentas.Legend.LabelFont = chartFont9;
-            this.crtVentas.Location = new System.Drawing.Point(20, 21);
+            this.crtVentas.Location = new System.Drawing.Point(13, 13);
             this.crtVentas.Name = "crtVentas";
-            this.crtVentas.Size = new System.Drawing.Size(211, 121);
+            this.crtVentas.Size = new System.Drawing.Size(226, 146);
             this.crtVentas.TabIndex = 0;
             chartFont10.FontName = "Arial";
             chartFont10.Size = 12;
@@ -324,7 +324,7 @@
             // guna2ShadowPanel6
             // 
             this.guna2ShadowPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel6.Controls.Add(this.gunaChart3);
+            this.guna2ShadowPanel6.Controls.Add(this.crtGastos);
             this.guna2ShadowPanel6.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel6.Location = new System.Drawing.Point(516, 84);
             this.guna2ShadowPanel6.Margin = new System.Windows.Forms.Padding(0);
@@ -335,39 +335,39 @@
             this.guna2ShadowPanel6.Size = new System.Drawing.Size(254, 170);
             this.guna2ShadowPanel6.TabIndex = 4;
             // 
-            // gunaChart3
+            // crtGastos
             // 
             chartFont17.FontName = "Arial";
-            this.gunaChart3.Legend.LabelFont = chartFont17;
-            this.gunaChart3.Location = new System.Drawing.Point(20, 21);
-            this.gunaChart3.Name = "gunaChart3";
-            this.gunaChart3.Size = new System.Drawing.Size(211, 121);
-            this.gunaChart3.TabIndex = 0;
+            this.crtGastos.Legend.LabelFont = chartFont17;
+            this.crtGastos.Location = new System.Drawing.Point(13, 13);
+            this.crtGastos.Name = "crtGastos";
+            this.crtGastos.Size = new System.Drawing.Size(226, 146);
+            this.crtGastos.TabIndex = 0;
             chartFont18.FontName = "Arial";
             chartFont18.Size = 12;
             chartFont18.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart3.Title.Font = chartFont18;
+            this.crtGastos.Title.Font = chartFont18;
             chartFont19.FontName = "Arial";
-            this.gunaChart3.Tooltips.BodyFont = chartFont19;
+            this.crtGastos.Tooltips.BodyFont = chartFont19;
             chartFont20.FontName = "Arial";
             chartFont20.Size = 9;
             chartFont20.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart3.Tooltips.TitleFont = chartFont20;
-            this.gunaChart3.XAxes.GridLines = grid7;
+            this.crtGastos.Tooltips.TitleFont = chartFont20;
+            this.crtGastos.XAxes.GridLines = grid7;
             chartFont21.FontName = "Arial";
             tick7.Font = chartFont21;
-            this.gunaChart3.XAxes.Ticks = tick7;
-            this.gunaChart3.YAxes.GridLines = grid8;
+            this.crtGastos.XAxes.Ticks = tick7;
+            this.crtGastos.YAxes.GridLines = grid8;
             chartFont22.FontName = "Arial";
             tick8.Font = chartFont22;
-            this.gunaChart3.YAxes.Ticks = tick8;
-            this.gunaChart3.ZAxes.GridLines = grid9;
+            this.crtGastos.YAxes.Ticks = tick8;
+            this.crtGastos.ZAxes.GridLines = grid9;
             chartFont23.FontName = "Arial";
             pointLabel3.Font = chartFont23;
-            this.gunaChart3.ZAxes.PointLabels = pointLabel3;
+            this.crtGastos.ZAxes.PointLabels = pointLabel3;
             chartFont24.FontName = "Arial";
             tick9.Font = chartFont24;
-            this.gunaChart3.ZAxes.Ticks = tick9;
+            this.crtGastos.ZAxes.Ticks = tick9;
             // 
             // guna2ShadowPanel7
             // 
@@ -440,7 +440,7 @@
             // guna2ShadowPanel9
             // 
             this.guna2ShadowPanel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel9.Controls.Add(this.gunaChart4);
+            this.guna2ShadowPanel9.Controls.Add(this.crtUltimasVentas);
             this.guna2ShadowPanel9.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel9.Location = new System.Drawing.Point(9, 329);
             this.guna2ShadowPanel9.Margin = new System.Windows.Forms.Padding(0);
@@ -451,39 +451,39 @@
             this.guna2ShadowPanel9.Size = new System.Drawing.Size(761, 162);
             this.guna2ShadowPanel9.TabIndex = 3;
             // 
-            // gunaChart4
+            // crtUltimasVentas
             // 
             chartFont25.FontName = "Arial";
-            this.gunaChart4.Legend.LabelFont = chartFont25;
-            this.gunaChart4.Location = new System.Drawing.Point(20, 21);
-            this.gunaChart4.Name = "gunaChart4";
-            this.gunaChart4.Size = new System.Drawing.Size(716, 110);
-            this.gunaChart4.TabIndex = 0;
+            this.crtUltimasVentas.Legend.LabelFont = chartFont25;
+            this.crtUltimasVentas.Location = new System.Drawing.Point(13, 13);
+            this.crtUltimasVentas.Name = "crtUltimasVentas";
+            this.crtUltimasVentas.Size = new System.Drawing.Size(733, 134);
+            this.crtUltimasVentas.TabIndex = 0;
             chartFont26.FontName = "Arial";
             chartFont26.Size = 12;
             chartFont26.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart4.Title.Font = chartFont26;
+            this.crtUltimasVentas.Title.Font = chartFont26;
             chartFont27.FontName = "Arial";
-            this.gunaChart4.Tooltips.BodyFont = chartFont27;
+            this.crtUltimasVentas.Tooltips.BodyFont = chartFont27;
             chartFont28.FontName = "Arial";
             chartFont28.Size = 9;
             chartFont28.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
-            this.gunaChart4.Tooltips.TitleFont = chartFont28;
-            this.gunaChart4.XAxes.GridLines = grid10;
+            this.crtUltimasVentas.Tooltips.TitleFont = chartFont28;
+            this.crtUltimasVentas.XAxes.GridLines = grid10;
             chartFont29.FontName = "Arial";
             tick10.Font = chartFont29;
-            this.gunaChart4.XAxes.Ticks = tick10;
-            this.gunaChart4.YAxes.GridLines = grid11;
+            this.crtUltimasVentas.XAxes.Ticks = tick10;
+            this.crtUltimasVentas.YAxes.GridLines = grid11;
             chartFont30.FontName = "Arial";
             tick11.Font = chartFont30;
-            this.gunaChart4.YAxes.Ticks = tick11;
-            this.gunaChart4.ZAxes.GridLines = grid12;
+            this.crtUltimasVentas.YAxes.Ticks = tick11;
+            this.crtUltimasVentas.ZAxes.GridLines = grid12;
             chartFont31.FontName = "Arial";
             pointLabel4.Font = chartFont31;
-            this.gunaChart4.ZAxes.PointLabels = pointLabel4;
+            this.crtUltimasVentas.ZAxes.PointLabels = pointLabel4;
             chartFont32.FontName = "Arial";
             tick12.Font = chartFont32;
-            this.gunaChart4.ZAxes.Ticks = tick12;
+            this.crtUltimasVentas.ZAxes.Ticks = tick12;
             // 
             // Reportes
             // 
@@ -537,7 +537,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private Guna.Charts.WinForms.GunaChart crtVentas;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel6;
-        private Guna.Charts.WinForms.GunaChart gunaChart3;
+        private Guna.Charts.WinForms.GunaChart crtGastos;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblUltVenta;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
@@ -545,6 +545,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblVentaProm;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel9;
-        private Guna.Charts.WinForms.GunaChart gunaChart4;
+        private Guna.Charts.WinForms.GunaChart crtUltimasVentas;
     }
 }

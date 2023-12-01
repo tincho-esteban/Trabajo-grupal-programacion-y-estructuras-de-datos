@@ -9,5 +9,3 @@ salsa;20;800
 Pasta;20;1700
 Yogur Helado;5;650
 Banana;6;720
-ravioles;1;100
-harina ;20;3000
