@@ -55,7 +55,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
                 {
                     break;
                 }
-                dgProductos.Rows.Add(datos);
+                dgProductos.Rows.Add(datos[0], datos[1], datos[3], datos[4]);
             }
             SR.Close();
             FS.Close();
@@ -324,14 +324,20 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         private void btnVender_Click(object sender, EventArgs e)
         {
             //venta
-            FileStream FS = new FileStream("Ventas.txt", FileMode.Append);
+            FileStream FS = new FileStream("ProductosVendidos.txt", FileMode.Append);
+            FileStream FSV = new FileStream("Ventas.txt", FileMode.Append);
             StreamWriter SW = new StreamWriter(FS);
+            StreamWriter SWV = new StreamWriter(FSV);
             for (int i = 0; i < dgCarrito.Rows.Count; i++)
             {
                 SW.WriteLine(dgCarrito.Rows[i].Cells[0].Value + ";" + dgCarrito.Rows[i].Cells[1].Value + ";" + dgCarrito.Rows[i].Cells[2].Value + ";" + dgCarrito.Rows[i].Cells[3].Value + ";" + dgCarrito.Rows[i].Cells[4].Value);
             }
+            SWV.WriteLine(txtPrecioTotal.Text);
+
             SW.Close();
             FS.Close();
+            SWV.Close();
+            FSV.Close();
 
             ListarCarrito();
             limpiarCarrito();

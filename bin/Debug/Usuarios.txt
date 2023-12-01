@@ -1,2 +1,2 @@
 admin;admin;admin
-a;a;user
+a;a;admin
