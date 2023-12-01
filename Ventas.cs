@@ -40,7 +40,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             calcularTotal();
         }
 
-        void ListarProductos()
+        public void ListarProductos()
         {
             dgProductos.Rows.Clear();
             FileStream FS = new FileStream("Productos.txt", FileMode.OpenOrCreate);
@@ -121,13 +121,13 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 
                 if (ID != Convert.ToInt32(datos[0]))
                 {
-                    SW.WriteLine(datos[0] + ";" + datos[1] + ";" + datos[2] + ";" + datos[3]);
+                    SW.WriteLine(datos[0] + ";" + datos[1] + ";" + datos[2] + ";" + datos[3] + ";" + datos[4]);
                 }
                 else
                 {
                     if (cantidad > Convert.ToInt32(datos[3]))
                     {
-                        MessageBox.Show("No hay suficientes unidades de " + datos[1] + " " + datos[3], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No hay suficientes unidades de " + datos[1] + " " + datos[4], "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         SR.Close();
                         SW.Close();
                         FS.Close();
@@ -135,7 +135,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
                         return;
                     }
 
-                    SW.WriteLine(datos[0] + ";" + datos[1] + ";" + datos[2] + ";" + (Convert.ToInt32(datos[3]) - cantidad));
+                    SW.WriteLine(datos[0] + ";" + datos[1] + ";" + datos[2] + ";" + datos[3] + ";" + (Convert.ToInt32(datos[4]) - cantidad));
                 }
             }
             SR.Close();
@@ -188,8 +188,6 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 
         private void btnEliminarCarrito_Click(object sender, EventArgs e)
         {
-            
-
 
             int id = 0;
 
@@ -258,11 +256,11 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
                 }
                 if (id == Convert.ToInt32(datos2[0]))
                 {
-                    SW2.WriteLine(datos2[0] + ";" + datos2[1] + ";" + datos2[2] + ";" + (Convert.ToInt32(datos2[3]) + unitsRecuperar));
+                    SW2.WriteLine(datos2[0] + ";" + datos2[1] + ";" + datos2[2] + ";" + datos2[3] + ";" + (Convert.ToInt32(datos2[4]) + unitsRecuperar));
                 }
                 else
                 {
-                    SW2.WriteLine(datos2[0] + ";" + datos2[1] + ";" + datos2[2] + ";" + datos2[3]);
+                    SW2.WriteLine(datos2[0] + ";" + datos2[1] + ";" + datos2[2] + ";" + datos2[3] + ";" + datos2[4]);
                 }
             }
             SR2.Close();
@@ -288,8 +286,6 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         private void dgCarrito_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
             calcularTotal();
-            
-
         }
 
         private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
@@ -341,9 +337,6 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             limpiarCarrito();
 
             MessageBox.Show("Venta realizada con exito", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
         }
     }
 }

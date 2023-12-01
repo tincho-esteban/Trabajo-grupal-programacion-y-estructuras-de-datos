@@ -26,8 +26,6 @@ C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master
 C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.exe
 C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos-master\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.pdb
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\bin\Debug\Guna.Charts.WinForms.dll
-C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\bin\Debug\Guna.Charts.WinForms.xml
-C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Agregar.resources
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Reportes.resources
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Stock.resources
 C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo_grupal_programacion_y_estructuras_de_datos.Ventas.resources
@@ -59,3 +57,4 @@ C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\De
 C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.csproj.CopyComplete
 C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.exe
 C:\Users\Nachi\Desktop\Trabajo-grupal-programacion-y-estructuras-de-datos\obj\Debug\Trabajo-grupal-programacion-y-estructuras-de-datos.pdb
+C:\Users\tincho\source\repos\Trabajo-grupal-programacion-y-estructuras-de-datos\bin\Debug\Guna.Charts.WinForms.xml

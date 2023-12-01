@@ -1,11 +1,11 @@
-1;Salchicha;180;55
-2;Queso;200;45
-3;Pan;120;25
-4;Huevos;90;5
-5;Leche;150;25
-6;Arroz;70;25
-7;Manzanas;80;13
-8;Aceite;220;70
-9;Pasta;110;40
-10;Yogur Helado;130;55
-11;Banana;120;20
+1;Salchicha;140;180;45
+2;Queso;100;200;30
+3;Pan;80;120;25
+4;Huevos;40;70;10
+5;Leche;120;150;25
+6;Arroz;50;70;23
+7;Aceite;120;220;69
+8;Pasta;60;110;40
+9;Yogur Helado;70;130;55
+10;Banana;50;120;20
+11;salsa;40;100;45

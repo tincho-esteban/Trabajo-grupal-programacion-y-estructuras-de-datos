@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 {
@@ -16,5 +18,9 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         {
             InitializeComponent();
         }
+
+        int ganancia = 0, ventas = 0, gastos = 0;
+
     }
+
 }

@@ -20,42 +20,24 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             this.frm1 = frm1;
         }
 
-        private void Contenedor_Principal_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private Reportes frmR = null;
-        private Agregar frmA = null;
         private Stock frmS = null;
         private Ventas frmV = null;
-        private ControlUsuarios frmAU = null;
+        private ControlUsuarios frmU = null;
 
-
-        private void btnReportes_Click(object sender, EventArgs e)
+        private void Contenedor_Principal_Load(object sender, EventArgs e)
         {
-            if (frmR == null)
-            {
-                frmR = new Reportes();
-                frmR.TopLevel = false;
-                frmR.Dock = DockStyle.Fill;
-                this.panelContenedor.Controls.Add(frmR);
-            }
-            frmR.BringToFront();
+            frmR = new Reportes();
+            frmR.TopLevel = false;
+            frmR.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(frmR);
             frmR.Show();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnReportes_Click(object sender, EventArgs e)
         {
-            if (frmA == null)
-            {
-                frmA = new Agregar();
-                frmA.TopLevel = false;
-                frmA.Dock = DockStyle.Fill;
-                this.panelContenedor.Controls.Add(frmA);
-            }
-            frmA.BringToFront();
-            frmA.Show();
+            frmR.BringToFront();
+            frmR.Show();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
@@ -69,6 +51,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             }
             frmS.BringToFront();
             frmS.Show();
+            frmS.ListarProductos();
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
@@ -82,19 +65,21 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             }
             frmV.BringToFront();
             frmV.Show();
+            frmV.ListarProductos();
         }
 
         private void btnControlUsuarios_Click(object sender, EventArgs e)
         {
-            if (frmAU == null)
+            if (frmU == null)
             {
-                frmAU = new ControlUsuarios();
-                frmAU.TopLevel = false;
-                frmAU.Dock = DockStyle.Fill;
-                this.panelContenedor.Controls.Add(frmAU);
+                frmU = new ControlUsuarios();
+                frmU.TopLevel = false;
+                frmU.Dock = DockStyle.Fill;
+                this.panelContenedor.Controls.Add(frmU);
             }
-            frmAU.BringToFront();
-            frmAU.Show();
+            frmU.BringToFront();
+            frmU.Show();
+            frmU.listar();
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

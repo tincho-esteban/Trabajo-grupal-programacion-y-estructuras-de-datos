@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAgregarProducto = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEliminar = new Guna.UI2.WinForms.Guna2Button();
             this.dgProductos = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtId = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPrecio = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +44,13 @@
             this.txtProducto = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAccion = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtBuscarProducto = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.COSTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UNIDADES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCosto = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -95,29 +99,30 @@
             this.dgProductos.AllowUserToDeleteRows = false;
             this.dgProductos.AllowUserToResizeColumns = false;
             this.dgProductos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.PRODUCTO,
+            this.COSTO,
             this.PRECIO,
             this.UNIDADES});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgProductos.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgProductos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgProductos.Location = new System.Drawing.Point(255, 12);
             this.dgProductos.Name = "dgProductos";
@@ -149,38 +154,6 @@
             this.dgProductos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellClick);
             this.dgProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgProductos_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 81.21828F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // PRODUCTO
-            // 
-            this.PRODUCTO.FillWeight = 165.3853F;
-            this.PRODUCTO.HeaderText = "PRODUCTO";
-            this.PRODUCTO.Name = "PRODUCTO";
-            this.PRODUCTO.ReadOnly = true;
-            this.PRODUCTO.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.FillWeight = 68.04394F;
-            this.PRECIO.HeaderText = "PRECIO";
-            this.PRECIO.Name = "PRECIO";
-            this.PRECIO.ReadOnly = true;
-            this.PRECIO.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // UNIDADES
-            // 
-            this.UNIDADES.FillWeight = 85.35248F;
-            this.UNIDADES.HeaderText = "UNIDADES";
-            this.UNIDADES.Name = "UNIDADES";
-            this.UNIDADES.ReadOnly = true;
-            this.UNIDADES.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // txtId
             // 
@@ -219,13 +192,13 @@
             this.txtPrecio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrecio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecio.Location = new System.Drawing.Point(0, 72);
+            this.txtPrecio.Location = new System.Drawing.Point(0, 108);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.PasswordChar = '\0';
             this.txtPrecio.PlaceholderText = "Precio";
             this.txtPrecio.SelectedText = "";
             this.txtPrecio.Size = new System.Drawing.Size(200, 36);
-            this.txtPrecio.TabIndex = 13;
+            this.txtPrecio.TabIndex = 14;
             // 
             // guna2Button3
             // 
@@ -233,10 +206,10 @@
             this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(0, 165);
+            this.guna2Button3.Location = new System.Drawing.Point(0, 189);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(200, 40);
-            this.guna2Button3.TabIndex = 15;
+            this.guna2Button3.TabIndex = 16;
             this.guna2Button3.Text = "Enviar";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
@@ -253,24 +226,25 @@
             this.txtUnidades.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUnidades.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUnidades.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUnidades.Location = new System.Drawing.Point(0, 108);
+            this.txtUnidades.Location = new System.Drawing.Point(0, 144);
             this.txtUnidades.Name = "txtUnidades";
             this.txtUnidades.PasswordChar = '\0';
             this.txtUnidades.PlaceholderText = "Unidades";
             this.txtUnidades.SelectedText = "";
             this.txtUnidades.Size = new System.Drawing.Size(200, 36);
-            this.txtUnidades.TabIndex = 14;
+            this.txtUnidades.TabIndex = 15;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.txtUnidades);
             this.guna2Panel1.Controls.Add(this.txtPrecio);
+            this.guna2Panel1.Controls.Add(this.txtCosto);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.txtProducto);
             this.guna2Panel1.Controls.Add(this.txtId);
-            this.guna2Panel1.Location = new System.Drawing.Point(25, 150);
+            this.guna2Panel1.Location = new System.Drawing.Point(25, 172);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(200, 205);
+            this.guna2Panel1.Size = new System.Drawing.Size(200, 229);
             this.guna2Panel1.TabIndex = 14;
             // 
             // txtProducto
@@ -298,11 +272,11 @@
             // 
             this.lblAccion.BackColor = System.Drawing.Color.Transparent;
             this.lblAccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblAccion.Location = new System.Drawing.Point(98, 122);
+            this.lblAccion.Location = new System.Drawing.Point(62, 144);
             this.lblAccion.Name = "lblAccion";
-            this.lblAccion.Size = new System.Drawing.Size(62, 22);
+            this.lblAccion.Size = new System.Drawing.Size(132, 22);
             this.lblAccion.TabIndex = 15;
-            this.lblAccion.Text = "Agregar";
+            this.lblAccion.Text = "Agregar producto";
             this.lblAccion.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtBuscarProducto
@@ -324,6 +298,65 @@
             this.txtBuscarProducto.Size = new System.Drawing.Size(199, 33);
             this.txtBuscarProducto.TabIndex = 16;
             this.txtBuscarProducto.TextChanged += new System.EventHandler(this.txtBuscarProducto_TextChanged);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 81.21828F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // PRODUCTO
+            // 
+            this.PRODUCTO.FillWeight = 165.3853F;
+            this.PRODUCTO.HeaderText = "PRODUCTO";
+            this.PRODUCTO.Name = "PRODUCTO";
+            this.PRODUCTO.ReadOnly = true;
+            this.PRODUCTO.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // COSTO
+            // 
+            this.COSTO.HeaderText = "COSTO";
+            this.COSTO.Name = "COSTO";
+            this.COSTO.ReadOnly = true;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.FillWeight = 68.04394F;
+            this.PRECIO.HeaderText = "PRECIO VENTA";
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.ReadOnly = true;
+            this.PRECIO.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // UNIDADES
+            // 
+            this.UNIDADES.FillWeight = 85.35248F;
+            this.UNIDADES.HeaderText = "UNIDADES";
+            this.UNIDADES.Name = "UNIDADES";
+            this.UNIDADES.ReadOnly = true;
+            this.UNIDADES.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // txtCosto
+            // 
+            this.txtCosto.BorderRadius = 5;
+            this.txtCosto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCosto.DefaultText = "";
+            this.txtCosto.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCosto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCosto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCosto.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCosto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtCosto.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCosto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtCosto.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCosto.Location = new System.Drawing.Point(0, 72);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.PasswordChar = '\0';
+            this.txtCosto.PlaceholderText = "Costo";
+            this.txtCosto.SelectedText = "";
+            this.txtCosto.Size = new System.Drawing.Size(200, 36);
+            this.txtCosto.TabIndex = 13;
             // 
             // Stock
             // 
@@ -354,10 +387,6 @@
         private Guna.UI2.WinForms.Guna2Button btnEditar;
         private Guna.UI2.WinForms.Guna2Button btnEliminar;
         private Guna.UI2.WinForms.Guna2DataGridView dgProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
         private Guna.UI2.WinForms.Guna2TextBox txtId;
         private Guna.UI2.WinForms.Guna2TextBox txtPrecio;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
@@ -366,5 +395,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtProducto;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblAccion;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarProducto;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRODUCTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn COSTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UNIDADES;
+        private Guna.UI2.WinForms.Guna2TextBox txtCosto;
     }
 }
