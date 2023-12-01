@@ -46,6 +46,10 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
         }
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
+            txtId.Text = "";
+            txtProducto.Text = "";
+            txtPrecio.Text = "";
+            txtUnidades.Text = "";
             botonAct = "agregar";
             txtId.Visible = false;
             txtProducto.Visible = true;
@@ -59,6 +63,10 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            txtId.Text = "";
+            txtProducto.Text = "";
+            txtPrecio.Text = "";
+            txtUnidades.Text = "";
             botonAct = "editar";
             txtId.Visible = true;
             txtId.BringToFront();
@@ -73,6 +81,10 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            txtId.Text = "";
+            txtProducto.Text = "";
+            txtPrecio.Text = "";
+            txtUnidades.Text = "";
             botonAct = "eliminar";
             txtId.Visible = true;
             txtId.BringToFront();
@@ -89,8 +101,9 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             int id = 0;
             string linea = null;
             string linea2 = null;
+            int unidades = 0;
 
-            if (txtProducto.Text == "" || txtPrecio.Text == "")
+            if (txtProducto.Text == "" || txtPrecio.Text == "" || txtUnidades.Text == "")
             {
                 MessageBox.Show("Debe llenar todos los campos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtProducto.Focus();
@@ -105,6 +118,7 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
                 {
                     linea = SR.ReadLine();
                     datos = linea.Split(';');
+                    
                     if (datos.Length == 0)
                     {
                         break;
@@ -124,15 +138,17 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
                 FS.Close();
 
                 nombre = txtProducto.Text;
+                unidades = Convert.ToInt32(txtUnidades.Text);
                 precio = Convert.ToInt32(txtPrecio.Text);
                 MessageBox.Show("Producto agregado correctamente", "Producto agregado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtProducto.Text = "";
                 txtPrecio.Text = "";
+                txtUnidades.Text = "";
             }
 
 
             id++;
-            linea2 = id + ";" + nombre + ";" + precio;
+            linea2 = id + ";" + nombre + ";" + precio + ";" + unidades;
             FileStream FSAux = new FileStream("Productos.txt", FileMode.Append);
             StreamWriter SW = new StreamWriter(FSAux);
             SW.WriteLine(linea2);
@@ -142,21 +158,101 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             ListarProductos();
         }
 
+        
+
         private void editar()
         {
+
+            //editar txt
+            int precio = 0;
+            string nombre = "";
+            int id = 0;
+            int unidades = 0;
+            string linea = null;
+            string linea2 = null;
+
+            if (txtId.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un producto", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtProducto.Focus();
+                return;
+            }
+            if (txtProducto.Text == "" || txtPrecio.Text == "" || txtUnidades.Text == "")
+            {
+                MessageBox.Show("Debe llenar todos los campos", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtProducto.Focus();
+                return;
+            }
+
+            FileStream FS = new FileStream("Productos.txt", FileMode.OpenOrCreate);
+            FileStream FSAux = new FileStream("ProductosAux.txt", FileMode.OpenOrCreate);
+            StreamWriter SW = new StreamWriter(FSAux);
+            StreamReader SR = new StreamReader(FS);
+
+            string[] datos;
+            while (!(SR.Peek() == -1))
+            {
+                linea = SR.ReadLine();
+                datos = linea.Split(';');
+                if (datos.Length == 0)
+                {
+                    break;
+                }
+                id = Convert.ToInt32(datos[0]);
+                unidades = Convert.ToInt32(datos[3]);
+                if (txtId.Text == datos[0])
+                {
+                    nombre = txtProducto.Text;
+                    unidades = Convert.ToInt32(txtUnidades.Text);
+                    precio = Convert.ToInt32(txtPrecio.Text);
+                    id = Convert.ToInt32(txtId.Text);
+                    linea2 = id + ";" + nombre + ";" + precio + ";" + unidades;
+                    MessageBox.Show("Producto editado correctamente", "Producto editado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtProducto.Text = "";
+                    txtPrecio.Text = "";
+                    txtUnidades.Text = "";
+                    txtId.Text = "";
+                    SW.WriteLine(linea2);
+                }
+                else
+                {
+                    SW.WriteLine(linea);
+                }
+            }
+            SW.Close();
+            SR.Close();
+            FS.Close();
+            FSAux.Close();
+            File.Delete("Productos.txt");
+            File.Move("ProductosAux.txt", "Productos.txt");
+            ListarProductos();
 
         }
 
         private void eliminar()
         {
-
+            if(txtId.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un producto", "Error de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtProducto.Focus();
+                return;
+            }
+           
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            if (!int.TryParse(txtPrecio.Text, out int precio) || !int.TryParse(txtUnidades.Text, out int unidades) || precio <= 0 || unidades <= 0)
+            {
+                MessageBox.Show("Ingrese valores válidos y mayores a cero en los campos de precio y unidades", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPrecio.Focus();
+                return;
+            }
+
             if (botonAct == "agregar")
             {
                 agregar();
+
             }
             else if (botonAct == "editar")
             {
@@ -168,6 +264,49 @@ namespace Trabajo_grupal_programacion_y_estructuras_de_datos
             }
         }
 
-        
+        private void dgProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void dgProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (botonAct == "editar" || botonAct == "eliminar")
+            {
+                txtId.Text = dgProductos.CurrentRow.Cells[0].Value.ToString();
+                txtProducto.Text = dgProductos.CurrentRow.Cells[1].Value.ToString();
+                txtPrecio.Text = dgProductos.CurrentRow.Cells[2].Value.ToString();
+                txtUnidades.Text = dgProductos.CurrentRow.Cells[3].Value.ToString();
+            }
+
+        }
+
+        private void txtBuscarProducto_TextChanged(object sender, EventArgs e)
+        {
+            // buscar en data grid
+            dgProductos.Rows.Clear();
+            FileStream FS = new FileStream("Productos.txt", FileMode.OpenOrCreate);
+            StreamReader SR = new StreamReader(FS);
+            string[] datos;
+            string linea = null;
+                while (!(SR.Peek() == -1))
+            {
+                linea = SR.ReadLine();
+                datos = linea.Split(';');
+                if (datos.Length == 0)
+                {
+                    break;
+                }
+                
+
+                if (datos[1].ToLower().Contains(txtBuscarProducto.Text.ToLower()))
+                {
+                    dgProductos.Rows.Add(datos);
+                }
+            }
+                SR.Close();
+            FS.Close();
+
+
+        }
     }
 }

@@ -1,0 +1,4 @@
+1;Salchicha;5;180;900
+3;Pan;5;120;600
+7;Manzanas;6;80;480
+7;Manzanas;15;80;1200
